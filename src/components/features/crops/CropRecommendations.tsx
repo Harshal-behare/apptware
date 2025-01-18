@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Plane as Plant, Droplet } from 'lucide-react';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 interface FormData {
   nitrogen: number;
@@ -20,6 +21,7 @@ const statesAndCities = {
 };
 
 const CropRecommendations: React.FC<{ isDark: boolean }> = ({ isDark }) => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<FormData>({
     nitrogen: 0,
     phosphorus: 0,
@@ -61,13 +63,13 @@ const CropRecommendations: React.FC<{ isDark: boolean }> = ({ isDark }) => {
   return (
     <div className={`min-h-screen pt-20 ${isDark ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'}`}>
       <div className="max-w-4xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8 text-center">Crop Recommendations</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center">{t('cropRecommendations')}</h1>
 
         <div className={`p-6 rounded-lg shadow-lg ${isDark ? 'bg-gray-700' : 'bg-white'}`}>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium mb-2">Nitrogen (N)</label>
+                <label className="block text-sm font-medium mb-2">{t('nitrogen')}</label>
                 <input
                   type="number"
                   name="nitrogen"
@@ -188,13 +190,13 @@ const CropRecommendations: React.FC<{ isDark: boolean }> = ({ isDark }) => {
               type="submit"
               className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors"
             >
-              Get Recommendations
+              {t('getRecommendations')}
             </button>
           </form>
 
           {recommendations.length > 0 && (
             <div className="mt-8">
-              <h2 className="text-xl font-semibold mb-4">Recommended Crops</h2>
+              <h2 className="text-xl font-semibold mb-4">{t('recommendedCrops')}</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {recommendations.map((crop, index) => (
                   <div

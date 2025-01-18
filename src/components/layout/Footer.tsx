@@ -6,7 +6,7 @@ const Footer = ({ isDark }: { isDark: boolean }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">AgroCare</h3>
+            <h3 className="text-lg font-semibold mb-4">PlantCare</h3>
             <p className="text-sm">
               Empowering farmers with AI-driven solutions for better crop management and disease detection.
             </p>
@@ -23,7 +23,7 @@ const Footer = ({ isDark }: { isDark: boolean }) => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm">
-              <li>Email: support@agrocare.com</li>
+              <li>Email: support@plantcare.com</li>
               <li>Phone: +1 (555) 123-4567</li>
               <li>Address: 123 Agriculture Street</li>
             </ul>

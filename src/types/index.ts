@@ -2,6 +2,7 @@ export interface Message {
   text: string;
   isBot: boolean;
   timestamp: Date;
+  image?: string;
 }
 
 export interface CommonProps {
