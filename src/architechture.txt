@@ -1,0 +1,33 @@
+src/
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx          # Move from current location
+│   │   └── Footer.tsx          # Move from current location
+│   │
+│   ├── features/
+│   │   ├── disease/
+│   │   │   └── DiseaseDetection.tsx    # Move from src/components/DiseaseDetection.tsx
+│   │   │
+│   │   ├── crops/
+│   │   │   └── CropRecommendations.tsx # Move from src/components/CropRecommendations.tsx
+│   │   │
+│   │   └── chat/
+│   │       └── Chatbot.tsx     # Move from src/components/Chatbot.tsx
+│   │
+│   └── common/
+│       └── LucideIcon.tsx      # Move from src/components/LucideIcon.tsx
+│
+├── pages/
+│   ├── Home.tsx               # Already in correct location
+│   ├── DiseaseDetection.tsx   # Already in correct location
+│   └── CropRecommendations.tsx # Already in correct location
+│
+├── styles/
+│   └── index.css             # Create if not exists for any global styles
+│
+├── types/
+│   └── index.ts              # Create for shared TypeScript interfaces
+│
+├── App.tsx                   # Already in root
+├── main.tsx                  # Already in root
+└── vite-env.d.ts            # Already in root
